@@ -1,0 +1,15 @@
+{
+    "name": "Photo Storage",
+    "description": "Todo",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Umer Salman"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}
