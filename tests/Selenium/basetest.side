@@ -1,0 +1,347 @@
+{
+  "id": "caae00f7-b36e-4743-81ec-8b4a9e9e5284",
+  "version": "2.0",
+  "name": "basetest",
+  "url": "http://70.114.217.80:2351/nextcloud/apps/files/",
+  "tests": [{
+    "id": "151e7c78-3d1e-435d-9736-395a914a4380",
+    "name": "download_File",
+    "commands": [{
+      "id": "e113e78f-7b10-4f6e-b205-d3dcb6db1159",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ui-droppable:nth-child(2) .nametext",
+      "targets": [
+        ["css=.ui-droppable:nth-child(2) .nametext", "css:finder"],
+        ["xpath=//tbody[@id='fileList']/tr[2]/td[2]/a/span", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Photos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "06597b9c-b6bc-4807-bccd-71938e88b5a6",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.ui-droppable:nth-child(2) .nametext",
+      "targets": [
+        ["css=.ui-droppable:nth-child(2) .nametext", "css:finder"],
+        ["xpath=//tbody[@id='fileList']/tr[2]/td[2]/a/span", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Photos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c36a27d-cbb1-4120-9a0c-201db86c76e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#more-apps > a",
+      "targets": [
+        ["css=#more-apps > a", "css:finder"],
+        ["xpath=//li[@id='more-apps']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//li[19]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'More')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e3ea603-56f6-498e-8a99-91c8f8f7aa7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-more-white",
+      "targets": [
+        ["css=.icon-more-white", "css:finder"],
+        ["xpath=//li[@id='more-apps']/a/div", "xpath:idRelative"],
+        ["xpath=//li[19]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d631fd95-1102-4b1b-844f-0e2280b1d1ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row-element:nth-child(2) > .image-label",
+      "targets": [
+        ["css=.row-element:nth-child(2) > .image-label", "css:finder"],
+        ["xpath=//div[@id='gallery']/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'IMG_20190910_164319.jpg')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee42af84-7338-47d4-bb33-c1e2812363f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.downloadImage",
+      "targets": [
+        ["css=.downloadImage", "css:finder"],
+        ["xpath=//input[@value='Download']", "xpath:attributes"],
+        ["xpath=//div[@id='slideshow']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "59d4eb29-42fa-453c-851a-c9b03f0f857a",
+    "name": "delete_File",
+    "commands": [{
+      "id": "e21e9c73-a364-4cb8-a77a-28e13198087f",
+      "comment": "",
+      "command": "open",
+      "target": "http://70.114.217.80:2351/nextcloud/apps/files/?dir=/&fileid=6242",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4fd6be0-199e-4470-a797-1ac9bbcc061d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "642x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1111c6b-d820-4e48-8e3a-40111be4e134",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-more-white",
+      "targets": [
+        ["css=.icon-more-white", "css:finder"],
+        ["xpath=//li[@id='more-apps']/a/div", "xpath:idRelative"],
+        ["xpath=//li[19]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfac18b6-11ba-4b0c-a38a-627247f2fc69",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.icon-more-white",
+      "targets": [
+        ["css=.icon-more-white", "css:finder"],
+        ["xpath=//li[@id='more-apps']/a/div", "xpath:idRelative"],
+        ["xpath=//li[19]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc43ba18-8782-4494-8fb1-96bae5d45868",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.icon-more-white",
+      "targets": [
+        ["css=.icon-more-white", "css:finder"],
+        ["xpath=//li[@id='more-apps']/a/div", "xpath:idRelative"],
+        ["xpath=//li[19]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d00c839c-29ca-4e4e-a4f5-f97849366903",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul:nth-child(1) > li:nth-child(6) span",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(6) span", "css:finder"],
+        ["xpath=//div[@id='apps']/ul/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//div/div/ul/li[6]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18785c61-5334-4d74-8546-a752e4c65603",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row-element:nth-child(2) > .image-label",
+      "targets": [
+        ["css=.row-element:nth-child(2) > .image-label", "css:finder"],
+        ["xpath=//div[@id='gallery']/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'IMG_20190910_164319.jpg')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3ab2431-c790-46ab-9919-6bfe72a5ab02",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.row-element:nth-child(2) > .image-label",
+      "targets": [
+        ["css=.row-element:nth-child(2) > .image-label", "css:finder"],
+        ["xpath=//div[@id='gallery']/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'IMG_20190910_164319.jpg')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f8f23f9-1fe7-4874-853c-db591acc878d",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.row-element:nth-child(2) > .image-label",
+      "targets": [
+        ["css=.row-element:nth-child(2) > .image-label", "css:finder"],
+        ["xpath=//div[@id='gallery']/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'\n\t\tIMG_20190910_164319.jpg\n\t')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d6108f2-3572-4568-ad08-7cf20ef68a0d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.deleteImage",
+      "targets": [
+        ["css=.deleteImage", "css:finder"],
+        ["xpath=//input[@value='Delete']", "xpath:attributes"],
+        ["xpath=//div[@id='slideshow']/div[3]/input[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "544d1916-1105-446c-93bb-b0669409291a",
+    "name": "login",
+    "commands": [{
+      "id": "8e0aff71-4701-4b73-af95-86b679e0de54",
+      "comment": "",
+      "command": "open",
+      "target": "/nextcloud/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7162850-fed1-45ae-8bad-440c6d101502",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "621x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ccc6406-25fd-4a06-98a3-4e102b0429f0",
+      "comment": "",
+      "command": "click",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//body[@id='body-login']/div/div/main/form/fieldset/p/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75216977-2852-4544-80cf-c0d052d52039",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//body[@id='body-login']/div/div/main/form/fieldset/p/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "chromatoria"
+    }, {
+      "id": "ee74adc8-f494-4894-abf3-3052769a9524",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//body[@id='body-login']/div/div/main/form/fieldset/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "14312542"
+    }, {
+      "id": "a6a4b88c-0e1a-443b-842b-f0229516011c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//body[@id='body-login']/div/div/main/form/fieldset/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }, {
+    "id": "12dc5105-5d67-403f-bba7-761e7521d053",
+    "name": "upload_File",
+    "commands": [{
+      "id": "91bcfe02-469f-4f4c-85be-7a1dd619c7a3",
+      "comment": "",
+      "command": "open",
+      "target": "http://70.114.217.80:2351/nextcloud/apps/files/?dir=/&fileid=6242",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a02e34b2-36b1-4c89-a92d-0218e8f689ba",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "621x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a4c70da-061a-4bf6-9a27-9c1c551f45ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-more-white",
+      "targets": [
+        ["css=.icon-more-white", "css:finder"],
+        ["xpath=//li[@id='more-apps']/a/div", "xpath:idRelative"],
+        ["xpath=//li[19]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be4da4b5-6437-4096-b7ab-d19562ee4c02",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul:nth-child(1) > li:nth-child(6) span",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(6) span", "css:finder"],
+        ["xpath=//div[@id='apps']/ul/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//div/div/ul/li[6]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e19c58b-b014-4dab-abf0-c5385d3aa85c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-add",
+      "targets": [
+        ["css=.icon-add", "css:finder"],
+        ["xpath=//div[@id='controls']/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3da15a7-e7ff-4272-b9e7-d107a08da641",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) .displayname",
+      "targets": [
+        ["css=li:nth-child(1) .displayname", "css:finder"],
+        ["xpath=//div[@id='controls']/div[2]/div[4]/ul/li/label/span[2]", "xpath:idRelative"],
+        ["xpath=//label/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Upload')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "366ddc3c-9f65-4e26-8682-1bf699b2a2b5",
+      "comment": "",
+      "command": "chooseCancelOnNextPrompt",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "174703a9-8ce5-4904-ae90-6caf196ab251",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["151e7c78-3d1e-435d-9736-395a914a4380"]
+  }],
+  "urls": ["http://70.114.217.80:2351/", "http://70.114.217.80:2351/nextcloud/apps/files/"],
+  "plugins": []
+}
