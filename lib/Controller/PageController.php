@@ -25,8 +25,6 @@ class PageController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function index() {
-		$output = shell_exec('ls -lart');
-		echo "<center><pre>$output</pre></center>";
 		return new TemplateResponse('photostorage', 'index');  // templates/index.php
 	}
 

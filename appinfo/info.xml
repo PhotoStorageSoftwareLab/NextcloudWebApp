@@ -5,7 +5,7 @@
     <name>Photo Storage</name>
     <summary>Todo</summary>
     <description><![CDATA[Todo]]></description>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <licence>agpl</licence>
     <author mail="umer936@utexas.edu" homepage="https://umer936.com">Umer Salman</author>
     <namespace>PhotoStorage</namespace>

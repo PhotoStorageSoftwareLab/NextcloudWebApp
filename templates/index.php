@@ -1,5 +1,11 @@
 <?php
-script('photostorage', 'script');
+
+// Check if we are a user
+OCP\User::checkLoggedIn();
+
+script('photostorage', 'dist/dropzone');
+script('photostorage', 'drop');
+script('photostorage', 'nextcloudapi');
 style('photostorage', 'style');
 ?>
 
