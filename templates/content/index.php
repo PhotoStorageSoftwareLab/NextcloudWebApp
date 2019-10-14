@@ -5,13 +5,12 @@
 </div>
 <div class="url-share">
 	<label>Link to share</label>
-	<input id="url-drop" />
+    <label for="url-drop"></label><input id="url-drop" />
 	<span class="copyButton icon-clippy" data-clipboard-target="#url-drop" title="Copy"></span>
 </div>
 
-<h1>Your Photos</h1>
-<p class ="photo">Placeholder Photo1 </p>
-<p class ="photo">Placeholder Photo2 </p>
+<!--<p class ="photo">Placeholder Photo1 </p>-->
+<!--<p class ="photo">Placeholder Photo2 </p>-->
 
 <ul class='custom-contextmenu'>
 <li data-action = "download">Download</li>
@@ -20,11 +19,13 @@
 </ul>
 
 <?php
+
 //	$imagepath = escapeshellarg($imagepath);
-	// $imagepath = 'data/dog.jpg';
-	// echo "<img src='/nextcloud/apps/photostorage/lib/darknet/".$imagepath."'>";
-	// echo shell_exec('cd apps/photostorage/lib/darknet;./darknet detect cfg/yolov3.cfg yolov3.weights '.$imagepath.' | grep "%"');
-	// echo "<img src='/nextcloud/apps/photostorage/lib/darknet/predictions.jpg'>";
+//	 $imagepath = 'data/dog.jpg';
+	 echo "<img class='photo' src='/nextcloud/apps/photostorage/lib/tempimg.jpg'>";
+	 echo shell_exec('cd apps/photostorage/lib/darknet;./darknet detect cfg/yolov3.cfg yolov3.weights ../tempimg.jpg > predicts.txt');
+	 echo shell_exec('cat predicts.txt | grep "%"');
+	 echo "<img class='photo' src='/nextcloud/apps/photostorage/lib/darknet/predictions.jpg'>";
 	// echo shell_exec('cd apps/photostorage/lib/darknet;./darknet detector test cfg/combine9k.data cfg/yolo9000.cfg yolo9000.weights '.$imagepath.' | grep "%"');
 	// echo "<br />";
 	// echo "<img src='http://localhost/nextcloud/apps/photostorage/lib/darknet/predictions.jpg'>";

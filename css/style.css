@@ -1,6 +1,8 @@
 
 .photo{
   cursor: pointer;
+    max-width: 90%;
+    max-height: 90%;
 }
 /* css for contextmenu taken from
 https://stackoverflow.com/questions/4495626/making-custom-right-click-context-menus-for-my-web-app

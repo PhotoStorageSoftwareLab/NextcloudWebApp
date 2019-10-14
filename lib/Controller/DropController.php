@@ -23,6 +23,7 @@
 
 namespace OCA\PhotoStorage\Controller;
 
+use Exception;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\JSONResponse;
@@ -79,12 +80,13 @@ class DropController extends Controller {
 		$this->urlGenerator = $urlGenerator;
 	}
 
-	/**
-	 * @NoAdminRequired
-	 * @NoCSRFRequired
-	 *
-	 * @return JSONResponse
-	 */
+    /**
+     * @NoAdminRequired
+     * @NoCSRFRequired
+     *
+     * @return JSONResponse
+     * @throws Exception
+     */
 	public function upload() {
 		$files = $this->request->files;
 
@@ -103,8 +105,13 @@ class DropController extends Controller {
 
 		$file = $folder->newFile($fileName);
 		$file->putContent(file_get_contents($drop['tmp_name']));
+        $output = dirname(__DIR__, 1) . '/tempimg.jpg';
+        file_put_contents($output, file_get_contents($drop['tmp_name']));
+//        shell_exec('ls > test');
+//        shell_exec('cd ../darknet; ls; ./darknet detect cfg/yolov3.cfg yolov3.weights ../tempimg.jpg');
 
-		$share = $this->shareManager->newShare();
+
+        $share = $this->shareManager->newShare();
 		$share->setNode($file);
 		$share->setShareType(Share::SHARE_TYPE_LINK);
 		$share->setPermissions(Constants::PERMISSION_READ);
@@ -120,7 +127,7 @@ class DropController extends Controller {
 	/**
 	 * @return \OCP\Files\Folder
 	 */
-	private function getFolder() {
+	public function getFolder() {
 		$userFolder = $this->rootFolder->getUserFolder($this->userId);
 
 		//Check for PhotoStorage

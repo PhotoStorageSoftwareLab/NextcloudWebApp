@@ -10,6 +10,7 @@
 return [
     'routes' => [
         ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
+        ['name' => 'page#getList', 'url' => '/', 'verb' => 'GET'],
 		['name' => 'drop#upload', 'url' => '/drop', 'verb' => 'POST'],
     ]
 ];
